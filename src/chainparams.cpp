@@ -101,10 +101,11 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1510704000; // November 15th, 2017.
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000723d3581fe1bd55373540a");
+//        consensus.nMinimumChainWork = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000008");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x0000000000000000003b9ce759c2a087d52abc4266f8f4ebd6d768b89defa50a"); //477890
+        consensus.defaultAssumeValid = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088"); //477890
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -125,7 +126,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xffc2b34c6f9000b9db0e125064f193749c51303848d21deecdb9458b646e2e5c"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("dnsseed.cashjuice.com", true);
+        vSeeds.emplace_back("dnsseed.kash-coin.org", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,43);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,20);
@@ -149,7 +150,7 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 000000000000000000d97e53664d17967bd4ee50b23abb92e54a34eb222d15ae (height 478913).
-            1516882163, // * UNIX timestamp of last known number of transactions
+            0, // * UNIX timestamp of last known number of transactions
             13,  // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1         // * estimated number of transactions per second after that timestamp
@@ -211,7 +212,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.cashjuice.com", true);
+        vSeeds.emplace_back("test-dnsseed.kash-coin.org", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
