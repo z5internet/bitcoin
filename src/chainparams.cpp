@@ -143,15 +143,17 @@ public:
         checkpointData = (CCheckpointData) {
             {
 
-                { 0, uint256S("0x")},
+                { 10, uint256S("0x000000000083a27b6f9cc59ebc49af85ea7c153c43e86d949d616834e7d18a64")},
+                { 50, uint256S("0x000000002e712bd16a5223702e2f9e9ddfe77d4eeab3f61cd42bc934b2dda564")},
+                { 100, uint256S("0x00000000fffc72281bf55772499d3d833767e9d7bd5a305206cc27229704d85b")},
 
             }
         };
 
         chainTxData = ChainTxData{
             // Data as of block 000000000000000000d97e53664d17967bd4ee50b23abb92e54a34eb222d15ae (height 478913).
-            0, // * UNIX timestamp of last known number of transactions
-            13,  // * total number of transactions between genesis and that timestamp
+            1518597735, // * UNIX timestamp of last known number of transactions
+            600,  // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.1         // * estimated number of transactions per second after that timestamp
         };
