@@ -75,10 +75,10 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.BIP34Height = 227931;
-        consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
-        consensus.BIP65Height = 388381; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
-        consensus.BIP66Height = 363725; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
+        consensus.BIP34Height = 0;
+        consensus.BIP34Hash = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088");
+        consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
+        consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 2.5 * 60;
@@ -102,10 +102,10 @@ public:
 
         // The best chain should have at least this much work.
 //        consensus.nMinimumChainWork = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088");
-        consensus.nMinimumChainWork = uint256S("000000000000000000000000000000000000000000000000000003d303d303d3");
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000100010001");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("000000008701d8d6315b0d7bdbc5da101e8ffaea210e6ccd5fab785420d2f28f"); //968
+        consensus.defaultAssumeValid = uint256S("0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088"); //968
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -143,9 +143,9 @@ public:
         checkpointData = (CCheckpointData) {
             {
 
-                { 10, uint256S("0x000000000083a27b6f9cc59ebc49af85ea7c153c43e86d949d616834e7d18a64")},
-                { 50, uint256S("0x000000002e712bd16a5223702e2f9e9ddfe77d4eeab3f61cd42bc934b2dda564")},
-                { 100, uint256S("0x00000000fffc72281bf55772499d3d833767e9d7bd5a305206cc27229704d85b")},
+//                { 10, uint256S("0x000000000083a27b6f9cc59ebc49af85ea7c153c43e86d949d616834e7d18a64")},
+//                { 50, uint256S("0x000000002e712bd16a5223702e2f9e9ddfe77d4eeab3f61cd42bc934b2dda564")},
+//                { 100, uint256S("0x00000000fffc72281bf55772499d3d833767e9d7bd5a305206cc27229704d85b")},
 
             }
         };
