@@ -75,10 +75,10 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088");
-        consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
-        consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
+        consensus.BIP34Height = 420;
+        consensus.BIP34Hash = uint256S("0x000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7");
+        consensus.BIP65Height = 420; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
+        consensus.BIP66Height = 420; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 2.5 * 60;
@@ -101,11 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1510704000; // November 15th, 2017.
 
         // The best chain should have at least this much work.
-//        consensus.nMinimumChainWork = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088");
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000100010001");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000001b601b601b6");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088"); //968
+        consensus.defaultAssumeValid = uint256S("0x000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7"); //968
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
