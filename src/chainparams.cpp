@@ -80,8 +80,8 @@ public:
         consensus.BIP65Height = 420; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
         consensus.BIP66Height = 420; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 2.5 * 60;
+        consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
+        consensus.nPowTargetSpacing = 10 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
