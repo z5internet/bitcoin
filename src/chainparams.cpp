@@ -75,10 +75,10 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.BIP34Height = 420;
-        consensus.BIP34Hash = uint256S("0x000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7");
-        consensus.BIP65Height = 420; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
-        consensus.BIP66Height = 420; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
+        consensus.BIP34Height = 0;
+        consensus.BIP34Hash = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088");
+        consensus.BIP65Height = 0; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
+        consensus.BIP66Height = 0; // 000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7
         consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 10 * 60;
@@ -101,10 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1510704000; // November 15th, 2017.
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000001b601b601b6");
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000100010001");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000005c8a7b8fe747f7ae0c863a0cabadfc37f50dafa331ac1e1091e7dbf7"); //968
+        consensus.defaultAssumeValid = uint256S("0x0000000068cf46c7008a34f17cbdad5af15e18d98e271d84ea849d77300bd088"); //968
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -151,8 +151,8 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 000000000000000000d97e53664d17967bd4ee50b23abb92e54a34eb222d15ae (height 478913).
-            1518900275, // * UNIX timestamp of last known number of transactions
-            984,  // * total number of transactions between genesis and that timestamp
+            0, // * UNIX timestamp of last known number of transactions
+            0,  // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.004213986314620428        // * estimated number of transactions per second after that timestamp
         };
